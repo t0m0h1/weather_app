@@ -1,6 +1,6 @@
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f0f8ff; /* Light blue background */
+    background-color: #dcedff; /* Light blue background */
     margin: 0; /* Remove default margin */
     padding: 0; /* Remove default padding */
     display: flex; /* Use flexbox layout */
@@ -9,11 +9,21 @@ body {
     height: 100vh; /* Set height to full viewport height */
 }
 
+input {
+    width: 100%; /* Make input full width */
+    padding: 10px; /* Add padding */
+    margin-top: 10px; /* Add margin at the top */
+    margin-bottom: 10px; /* Add margin at the bottom */
+    box-sizing: border-box; /* Include padding and border in the width */
+    border: 1px solid #ccc; /* Add border */
+    border-radius: 5px; /* Add border radius */
+}
+
 .container {
     max-width: 400px; /* Keep the original max-width */
     margin: 0 auto; /* Center the container horizontally */
     padding: 20px;
-    background-color: rgba(255, 255, 255, 0.5); /* Set the background color to be transparent */
+    background-color: rgba(199, 199, 199, 0.5); /* Set the background color to be transparent */
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Adjust the alpha value here for the box shadow transparency */
     margin-top: 0; /* Remove the top margin */
