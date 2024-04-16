@@ -14,17 +14,26 @@ searchButton.addEventListener('click', () => {
     }
 });
 
+
+
 function fetchWeather(location) {
     const url = `${apiUrl}?q=${location}&appid=${apiKey}&units=metric`;
 
     fetch(url)
-        .then(response => response.json())
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Unable to fetch weather data. Please try again later.');
+            }
+            return response.json();
+        })
         .then(data => {
             locationElement.textContent = data.name;
             temperatureElement.textContent = `${Math.round(data.main.temp)}°C`;
             descriptionElement.textContent = data.weather[0].description;
         })
         .catch(error => {
-            console.error('Error fetching weather data:', error);
+            console.error('Error fetching weather data:', error.message);
+            // Display a user-friendly error message on the UI
+            alert('Error fetching weather data. Please try again later.');
         });
 }
