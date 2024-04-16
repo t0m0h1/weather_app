@@ -9,6 +9,16 @@ body {
     height: 100vh; /* Set height to full viewport height */
 }
 
+#heading {
+    text-align: center; /* Center the heading */
+    margin-bottom: 20px; /* Add margin at the bottom */
+    position: absolute; /* Position the heading */
+    top: 100px; /* Set the distance from the top */
+    left: 50%; /* Center the heading horizontally */
+    transform: translateX(-50%); /* Adjust the horizontal position */
+    z-index: 1; /* Set the stacking order */
+}
+
 input {
     width: 100%; /* Make input full width */
     padding: 10px; /* Add padding */

@@ -7,10 +7,11 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <h1 id="heading">OpenWeatherUK</h1>
     <div class="container">
-        <h1>Open Weather Uk</h1>
+        <h2>Current Weather</h2>
         <input type="text" id="locationInput" placeholder="Enter a city">
-        <button id="searchButton">Search</button>
+        <button id="searchButtonCurrent">Search</button>
         <div class="weather-info">
             <h2 id="location"></h2>
             <p id="temperature"></p>
@@ -18,6 +19,21 @@
             <p id="wind"></p>
         </div>
     </div>
+
+    <div class="container">
+        <h2>Weather Forecast</h2>
+        <input type="text" id="forecastInput" placeholder="Enter a city">
+        <button id="searchButtonForecast">Search</button>
+        <div class="forecast-info">
+            <!-- Forecast data will be dynamically added here -->
+            <h2 id="forecastLocation"></h2>
+            <p id="forecastTemperature"></p>
+            <p id="forecastDescription"></p>
+            <p id="forecastWind"></p>
+        </div>
+    </div>
+
+
     <script src="script.js"></script>
 </body>
 </html>
