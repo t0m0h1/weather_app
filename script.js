@@ -3,9 +3,13 @@ const apiUrl = 'https://api.openweathermap.org/data/2.5/weather';
 
 const locationInput = document.getElementById('locationInput');
 const searchButton = document.getElementById('searchButton');
+
+// consts for the elements that will display the weather data
 const locationElement = document.getElementById('location');
 const temperatureElement = document.getElementById('temperature');
 const descriptionElement = document.getElementById('description');
+const windElement = document.getElementById('wind');
+
 
 searchButton.addEventListener('click', () => {
     const location = locationInput.value;
@@ -30,10 +34,11 @@ function fetchWeather(location) {
             locationElement.textContent = data.name;
             temperatureElement.textContent = `${Math.round(data.main.temp)}°C`;
             descriptionElement.textContent = data.weather[0].description;
+            windElement.textContent = `Wind: ${data.wind.speed} m/s`;
         })
         .catch(error => {
             console.error('Error fetching weather data:', error.message);
-            // Display a user-friendly error message on the UI
+            // Display error message on the UI
             alert('Error fetching weather data. Please try again later.');
         });
 }
